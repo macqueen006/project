@@ -1,0 +1,31 @@
+{
+  "Guest" : {
+    "denied" : {},
+    "Home" : ["*"],
+    "About" : ["*"],
+    "Travel" : ["*"],
+    "Contact" : ["*"],
+    "Technology" : ["*"],
+    "Price" : ["*"],
+    "Photography" : ["*"],
+    "Maintenance" : ["*"],
+    "Gallery" : ["*"],
+    "Food" : ["*"],
+    "Fashion" : ["*"],
+    "Coming" : ["*"],
+    "Author" : ["*"],
+    "Register" : ["login", "register"],
+    "Restricted" : ["*"]
+  },
+  "LoggedIn" : {
+    "denied" : {
+      "Register" : ["login", "register"]
+    },
+    "Register" : ["logout"]
+  },
+  "SuperAdmin" : {
+    "denied" : {},
+    "Admindashboard" : ["*"],
+    "Adminproducts" : ["*"]
+  }
+}
