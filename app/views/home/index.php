@@ -131,69 +131,28 @@
                                 <!-- Pagination -->
                                 <div class="gdlr-core-pagination  gdlr-core-style-circle gdlr-core-right-align gdlr-core-item-pdlr">
                                     <!-- <span aria-current=page class='page-numbers current'>1</span> -->
-                                    <?php 
-                                $link = 5;
-                                $last = $this->totalPages;
-                                $start = (($this->page - $link) > 0)? $this->page - $link : 1;
-                                $end = (($this->page + $link) < $last)? $this->page + $last: $last; 
-                                
-                                $link = 5;
-                                $list_class = "active";
-                                    // $html = "<ul class'".$list_class."'>";
-
-                                    $class = ($this->page == 1)? "disabled" : "";
-                                    
-                                    //previous page
-                             $previous_page = ($this->page == 1)?'<a class="prev page-numbers" href="'.<?php echo PROOT;?>.''home?page=1'"></a>' : '<li class="'.$class.'"><a href="home?page='.$this->limit.'"&limit="'.($this->page -1).'"></a></li>';
-                                    $html .= $previous_page;
-                                    if ($start > 1) {
-                                        $html .='<li class="'.$class.'"><a href="home?page='.$this->limit.'"&limit=1>1</a></li>';//print first page
-                                        $html .= '<li class="disabled"><span>...</span></li>';//print 3 dots if not on first page
-                                    }
-                                        //print all the numbered links
-                                        for ($i=$start; $i < $end; $i++) { 
-                                        $class = ($this->page ==1)? "active" : "";
-                                        $html .='<li class="'.$class.'"><a href="home?page='.$this->limit.'"&limit='.$i.'">'. $i .'</a></li>';
-                                        }
-                                    if ($end < $last) {
-                                        $html .= "<span class='disabled'>...</span>";
-                                        $html .='<li class="'.$class.'"><a href="home?page='.$this->limit.'"&limit='.$last.'">'. $last .'</a></li>';
-                                    }
-                                    $class = ($this->page == $last)? "disabled": "";
-
-                                    // this page + 1 for the next\
-                                    $next_page = ($this->page == $last)?
-                                        '<a href=""><li class="'.$class.'">&laquo</li></a>' :
-                                        '<li class="'.$class.'"><a href="home?page='.$this->limit.'"&limit="'.($this->page + 1).'"></a></li>';
-                                        $html .= $next_page;
-                                        $html .= "</ul>";
-                                        return $html;
-                                ?>
-
-
-
-                                <?php // if($this->page == 1): ?>
-                                   <?php // echo ""; //disable the button ?>
-                                <?php // else: ?>
-                                    <a class="prev page-numbers" href="<?php // echo PROOT;?>home?page=1"></a>
-                                <?php // endif; ?>
+                                    <?php if($this->page == 1): ?>
+                                   <?php echo "";//disable the button ?>
+                                <?php else: ?>
+                                    <a class="prev page-numbers" href="<?php echo PROOT;?>home?page=1"></a>
+                                <?php endif; ?>
                                 <!-- end of the previous button -->
                                 <!-- The span button -->
                                 
           
-                               <?php // for($i = $start; $i <= $end; $i++): ?>
-                                <?php // if($i == $this->page): ?>
-                                    <a aria-current=page class='page-numbers current gdlr-core-active' id="current" href='<?php // echo PROOT;?>home?page=<?=$i;?>'><?=$i;?></a> 
-                                <?php // else: ?>
-                                    <a class='page-numbers current gdlr-core-deactive' href='<?php // echo PROOT;?>home?page=<?=$i;?>'><?=$i;?></a> 
-                                <?php // endif; ?>
-                                <?php // endfor;?>
+                               <?php for($i = 1; $i <= $this->totalPages; $i++): ?>
+                                <?php if($i == $this->page): ?>
+                                    <a aria-current=page class='page-numbers current gdlr-core-active' id="current" href='<?php echo PROOT;?>home?page=<?=$i;?>'><?=$i;?></a> 
+                                <?php else: ?>
+                                    <a class='page-numbers current gdlr-core-deactive' href='<?php echo PROOT;?>home?page=<?=$i;?>'><?=$i;?></a> 
+                                <?php endif; ?>
+                                <?php endfor;?>
                                 <!-- this is the next button -->
-                                <?php // if($this->page == $last): ?>
-                                   <?php // echo  "";//disable the next button ?>
-                                    <?php // else: ?>
-                                    <a class="next page-numbers" href="<?php // echo PROOT;?>home?page=<?=$this->page + 1;?>"></a>
-                                <?php // endif;?>
+                                <?php if($this->page == $this->totalPages): ?>
+                                   <?php echo  "";//disable the next button ?>
+                                    <?php else: ?>
+                                    <a class="next page-numbers" href="<?php echo PROOT;?>home?page=<?=$this->page + 1;?>"></a>
+                                <?php endif;?>
                                 </div>
                             </div>
                         </div>
