@@ -2314,7 +2314,7 @@
 
 				var gdlr_core_js = $(this).find('.gdlr-core-js, iframe[src*="youtube"], iframe[src*="vimeo"]');
 				
-				// video resizing
+				// video resizing 
 				$(this).gdlr_core_content_script( gdlr_core_js, true );
 				
 				// counter item

@@ -1067,7 +1067,7 @@
 			
 			$('a[href]').not('[href^="#"], [target="_blank"], .gdlr-core-js, .strip').on('click', function(e){
 				if( e.which != 1 || $(this).hasClass('akea-no-preload') || e.ctrlKey ) return;
-				
+				 
 				if( window.location.href != this.href ){
 					page_preload.addClass('akea-out').fadeIn(animation_time);
 				}

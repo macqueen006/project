@@ -68,7 +68,7 @@
                                     <div class="gdlr-core-item-list gdlr-core-blog-full  gdlr-core-item-mglr gdlr-core-style-left">
                                         <div class="gdlr-core-blog-thumbnail-wrap clearfix">
                                             <div class="gdlr-core-blog-thumbnail gdlr-core-media-image  gdlr-core-opacity-on-hover gdlr-core-zoom-on-hover">
-                                                <a href=#>
+                                                <a href="<?=PROOT;?>home/post/<?=$post->id;?>">
                                                     <img src="<?=PROOT;?><?=$post->images; ?>" width=1000 height=400 >
                                                 </a>
                                             </div>
@@ -447,7 +447,7 @@
         <div class="akea-footer-container akea-container clearfix">
             <div class="akea-footer-column akea-item-pdlr akea-column-20">
                 <div id=text-2 class="widget widget_text akea-widget">
-                    <h3 class="akea-widget-title"><span class=akea-widget-head-text>Akea, blogger</span><span
+                    <h3 class="akea-widget-title"><span class=akea-widget-head-text>Macqueen, blogger</span><span
                             class=akea-widget-head-divider></span></h3><span class=clear></span>
                     <div class=textwidget>
                         <p>23 King Street, 5th Avenue, New York

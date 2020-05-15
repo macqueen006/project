@@ -41,6 +41,8 @@ class Posts extends Model {
       }
       return false;
     }
+
+    // for the pagination but later will be reviewed
     public function createLinks($links, $list_class) {
 
       if ($limit == "all") {
