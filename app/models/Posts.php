@@ -13,7 +13,7 @@ class Posts extends Model {
       $db = DB::getInstance();
       $limit = (array_key_exists('limit',$options) && !empty($options['limit']))? $options['limit'] : 4;
       $startLimit = ($page - 1) * $limit; 
-      $where = "deleted = ?";
+      $where = "posts.deleted = ?";
       $hasFilters = self::hasFilters($options);
       $binds = [];
       if(array_key_exists('search',$options) && !empty($options['search'])){
@@ -21,7 +21,8 @@ class Posts extends Model {
         $binds[] = "%" . $options['search'] . "%";
         $binds[] = "%" . $options['search'] . "%";
       }
-      $sql = "SELECT * FROM posts WHERE {$where}";
+      $sql = "SELECT posts.*, c.name as category, c.id as category_id FROM posts JOIN category as c ON posts.category_id = c.id WHERE {$where}";
+      // $sql = "SELECT * FROM posts WHERE {$where}";
 
       $group = ($hasFilters)? " ORDER BY id" : " ORDER BY title DESC";
 

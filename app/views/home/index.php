@@ -267,8 +267,8 @@
                                 <?php foreach($this->category as $cat): ?>
                                 <li class=gdlr-core-with-bg id="li_2207_0"><a href=#><span
                                             class=gdlr-core-category-background-widget-content><span
-                                                class=gdlr-core-category-background-widget-title><?php echo $cat->category; ?></span><span
-                                                class=gdlr-core-category-background-widget-count>5</span></span></a>
+                                                class=gdlr-core-category-background-widget-title style="color:black"><?php echo $cat->name; ?></span><span
+                                                class=gdlr-core-category-background-widget-count><?=$cat->id;?></span></span></a>
                                 </li>
                                     <?php endforeach; ?>
                             </ul>
@@ -283,7 +283,7 @@
                             <div class=tagcloud>
                                 <?php foreach($this->category as $cat): ?>
                                 <a href=# class="tag-cloud-link tag-link-117 tag-link-position-1" id="a_2207_16"
-                                    aria-label="Beach (2 items)"><?=$cat->category; ?></a>
+                                    aria-label="Beach (2 items)"><?=$cat->name; ?></a>
                                 <?php endforeach; ?>
                                
                             </div>
@@ -306,8 +306,7 @@
                                 <div class="gdlr-core-recent-post-widget clearfix">
                                     <div class="gdlr-core-recent-post-widget-thumbnail gdlr-core-media-image">
                                         <a class="gdlr-core-lightgallery gdlr-core-js "
-                                            href="<?=PROOT;?>upload/post-vr.jpg"><img
-                                                src="<?=PROOT;?><?=$post->images;?>" alt width=1000 height=486
+                                            href="<?=PROOT;?>upload/post-vr.jpg"><img src="<?=PROOT;?><?=$post->images;?>" alt width=1000 height=486
                                                 title=post-vr></a><span
                                             class="gdlr-core-blog-info gdlr-core-blog-info-font gdlr-core-skin-caption gdlr-core-blog-info-category"><a
                                                 href=# rel=tag>Trending</a></span></div>
@@ -326,8 +325,8 @@
                                 <?php endforeach; ?>
                             </div>
                         </div>
-                        <div id=gdlr-core-instagram-widget-2
-                            class="widget widget_gdlr-core-instagram-widget akea-widget">
+
+                        <div id=gdlr-core-instagram-widget-2 class="widget widget_gdlr-core-instagram-widget akea-widget">
                             <h3 class="akea-widget-title"><span class=akea-widget-head-text>Instagram</span><span
                                     class=akea-widget-head-divider></span></h3><span class=clear></span>
                             <div class="gdlr-core-instagram-widget clearfix">
@@ -441,6 +440,7 @@
         </div>
     </div>
 </div>
+
 <!-- begining of the footer -->
 <footer>
     <div class="akea-footer-wrapper ">
@@ -465,7 +465,7 @@
                     <div class=menu-category-container>
                         <ul id=menu-category class="gdlr-core-custom-menu-widget gdlr-core-menu-style-half">
                             <?php foreach($this->category as $cat): ?>
-                            <li class="menu-item"><a href=#><?=$cat->category;?></a></li>
+                            <li class="menu-item"><a href="<?=PROOT ;?>/category/<?=$cat->id;?>"><?=$cat->name;?></a></li>
                             <?php endforeach; ?>
                         </ul>
                     </div>
@@ -479,25 +479,26 @@
                     <div class=textwidget>
                         <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align"
                             id="div_2207_16">
-                            <a href=# target=_blank class=gdlr-core-social-network-icon title=facebook id="a_2207_31"
+                            
+                            <a href='<?=$this->facebook->endpoint;?>' target=_blank class=gdlr-core-social-network-icon title='<?=$this->facebook->name;?>' id="a_2207_31"
                                 rel="noopener noreferrer">
-                                <i class="fa fa-facebook"></i>
+                                <i class="fa fa-<?=$this->facebook->name;?>"></i>
                             </a>
-                            <a href=# target=_blank class=gdlr-core-social-network-icon title=pinterest id="a_2207_32"
+                            <a href='<?=$this->pinterest->endpoint;?>' target=_blank class=gdlr-core-social-network-icon title='<?=$this->pinterest->name;?>' id="a_2207_32"
                                 rel="noopener noreferrer">
-                                <i class="fa fa-pinterest-p"></i>
+                                <i class="fa fa-<?=$this->pinterest->name;?>-p"></i>
                             </a>
-                            <a href=# target=_blank class=gdlr-core-social-network-icon title=skype id="a_2207_33"
+                            <a href='<?=$this->skype->endpoint;?>' target=_blank class=gdlr-core-social-network-icon title='<?=$this->skype->name;?>' id="a_2207_33"
                                 rel="noopener noreferrer">
-                                <i class="fa fa-skype"></i>
+                                <i class="fa fa-<?=$this->skype->name;?>"></i>
                             </a>
-                            <a href=# target=_blank class=gdlr-core-social-network-icon title=twitter id="a_2207_34"
+                            <a href='<?=$this->twitter->endpoint;?>' target=_blank class=gdlr-core-social-network-icon title='<?=$this->twitter->name;?>' id="a_2207_34"
                                 rel="noopener noreferrer">
-                                <i class="fa fa-twitter"></i>
+                                <i class="fa fa-<?=$this->twitter->name;?>"></i>
                             </a>
-                            <a href=# target=_blank class=gdlr-core-social-network-icon title=instagram id="a_2207_35"
+                            <a href='<?=$this->instagram->name;?>' target=_blank class=gdlr-core-social-network-icon title='<?=$this->instagram->name;?>' id="a_2207_35"
                                 rel="noopener noreferrer">
-                                <i class="fa fa-instagram"></i>
+                                <i class="fa fa-<?=$this->instagram->name;?>"></i>
                             </a>
                         </div>
                     </div>
@@ -505,6 +506,7 @@
             </div>
         </div>
     </div>
+
     <div class=akea-copyright-wrapper>
         <div class="akea-copyright-container akea-container clearfix">
             <div class="akea-copyright-left akea-item-pdlr">Copyright 2019 Akea Blog, All Right Reserved</div>

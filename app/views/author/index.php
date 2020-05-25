@@ -5,7 +5,8 @@
             <div class=gdlr-core-page-builder-body>
                 <div class="gdlr-core-pbf-wrapper " id="div_e6a9_0">
                     <div class=gdlr-core-pbf-background-wrap>
-                        <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_e6a9_1" data-parallax-speed=0.3></div>
+                    <img src="<?=$this->bg_image->author_image;?>" alt="">
+                        <!-- <div class="gdlr-core-pbf-background gdlr-core-parallax gdlr-core-js" id="div_e6a9_1" data-parallax-speed=0.3></div> -->
                     </div>
                     <div class="gdlr-core-pbf-wrapper-content gdlr-core-js " data-gdlr-animation=fadeIn data-gdlr-animation-duration=600ms data-gdlr-animation-offset=0.8>
                         <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container">
@@ -15,7 +16,7 @@
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
                                                 <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_e6a9_0">Meet Our Writers<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " id="h3_e6a9_0"><?=$this->bg_image->author_name;?><span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
@@ -34,8 +35,7 @@
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" id="div_e6a9_4">
                                                 <div class=gdlr-core-text-box-item-content id="div_e6a9_5">
-                                                    <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                                                    <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam quis risus eget urna mollis ornare vel eu leo. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit avmet risus.</p>
+                                                    <p><?=$this->bg_image->about_author;?></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -51,25 +51,14 @@
                         <div class="gdlr-core-pbf-wrapper-container clearfix gdlr-core-container-custom" id="div_e6a9_7">
                             <div class=gdlr-core-pbf-element>
                                 <div class="gdlr-core-author-item gdlr-core-item-pdb gdlr-core-item-mgb clearfix" id="div_e6a9_8">
-                                    <div class="gdlr-core-author-list-column gdlr-core-item-pdlr  gdlr-core-column-15 gdlr-core-column-first">
-                                        <div class=gdlr-core-author-list>
-                                            <div class="gdlr-core-author-list-thumbnail gdlr-core-media-image"><img src=upload/author-1.jpg alt width=700 height=781 title=author-1></div>
-                                            <div class=gdlr-core-author-list-content-wrap>
-                                                <h3 class="gdlr-core-author-list-title">Jane Smith</h3>
-                                                <div class=gdlr-core-author-list-position>Senior Writer</div>
-                                                <div class=gdlr-core-author-list-social>
-                                                    <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" id="div_e6a9_9"><a href=#url target=_blank class=gdlr-core-social-network-icon title=facebook id="a_e6a9_0"><i class="fa fa-facebook" ></i></a><a href=# target=_blank class=gdlr-core-social-network-icon title=pinterest id="a_e6a9_1"><i class="fa fa-pinterest-p" ></i></a><a href=#url target=_blank class=gdlr-core-social-network-icon title=twitter id="a_e6a9_2"><i class="fa fa-twitter" ></i></a><a href=#url target=_blank class=gdlr-core-social-network-icon title=instagram id="a_e6a9_3"><i class="fa fa-instagram" ></i></a></div>
-                                                </div>
-                                                <div class=gdlr-core-author-list-url><a href=author1/index.html>Read Articles</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                   
+                                    <?php foreach($this->author as $author): ;?>
                                     <div class="gdlr-core-author-list-column gdlr-core-item-pdlr  gdlr-core-column-15">
                                         <div class=gdlr-core-author-list>
-                                            <div class="gdlr-core-author-list-thumbnail gdlr-core-media-image"><img src=upload/author-2.jpg alt width=700 height=781 title=author-2></div>
+                                            <div class="gdlr-core-author-list-thumbnail gdlr-core-media-image"><img src='<?=$author->author_image;?>' alt width=700 height=781 title=author-2></div>
                                             <div class=gdlr-core-author-list-content-wrap>
-                                                <h3 class="gdlr-core-author-list-title">Paul Newman</h3>
-                                                <div class=gdlr-core-author-list-position>Senior Editor</div>
+                                                <h3 class="gdlr-core-author-list-title"><?=$author->author_name;?></h3>
+                                                <div class=gdlr-core-author-list-position><?=$author->author_position;?></div>
                                                 <div class=gdlr-core-author-list-social>
                                                     <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" id="div_e6a9_10"><a href=#url target=_blank class=gdlr-core-social-network-icon title=facebook id="a_e6a9_4"><i class="fa fa-facebook" ></i></a><a href=# target=_blank class=gdlr-core-social-network-icon title=pinterest id="a_e6a9_5"><i class="fa fa-pinterest-p" ></i></a><a href=#url target=_blank class=gdlr-core-social-network-icon title=twitter id="a_e6a9_6"><i class="fa fa-twitter" ></i></a><a href=#url target=_blank class=gdlr-core-social-network-icon title=instagram id="a_e6a9_7"><i class="fa fa-instagram" ></i></a></div>
                                                 </div>
@@ -77,34 +66,10 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="gdlr-core-author-list-column gdlr-core-item-pdlr  gdlr-core-column-15">
-                                        <div class=gdlr-core-author-list>
-                                            <div class="gdlr-core-author-list-thumbnail gdlr-core-media-image"><img src=upload/author-3.jpg alt width=700 height=781 title=author-3></div>
-                                            <div class=gdlr-core-author-list-content-wrap>
-                                                <h3 class="gdlr-core-author-list-title">Janet Jones</h3>
-                                                <div class=gdlr-core-author-list-position>Senior Writter</div>
-                                                <div class=gdlr-core-author-list-social>
-                                                    <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" id="div_e6a9_11"><a href=#url target=_blank class=gdlr-core-social-network-icon title=facebook id="a_e6a9_8"><i class="fa fa-facebook" ></i></a><a href=# target=_blank class=gdlr-core-social-network-icon title=pinterest id="a_e6a9_9"><i class="fa fa-pinterest-p" ></i></a><a href=#url target=_blank class=gdlr-core-social-network-icon title=twitter id="a_e6a9_10"><i class="fa fa-twitter" ></i></a><a href=#url target=_blank class=gdlr-core-social-network-icon title=instagram id="a_e6a9_11"><i class="fa fa-instagram" ></i></a></div>
-                                                </div>
-                                                <div class=gdlr-core-author-list-url><a href=author3/index.html>Read Articles</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="gdlr-core-author-list-column gdlr-core-item-pdlr  gdlr-core-column-15">
-                                        <div class=gdlr-core-author-list>
-                                            <div class="gdlr-core-author-list-thumbnail gdlr-core-media-image"><img src=upload/author-4.jpg alt width=700 height=781 title=author-4></div>
-                                            <div class=gdlr-core-author-list-content-wrap>
-                                                <h3 class="gdlr-core-author-list-title">Kally Gordon</h3>
-                                                <div class=gdlr-core-author-list-position>Junior Writter</div>
-                                                <div class=gdlr-core-author-list-social>
-                                                    <div class="gdlr-core-social-network-item gdlr-core-item-pdb  gdlr-core-none-align" id="div_e6a9_12"><a href=#url target=_blank class=gdlr-core-social-network-icon title=facebook id="a_e6a9_12"><i class="fa fa-facebook" ></i></a><a href=# target=_blank class=gdlr-core-social-network-icon title=pinterest id="a_e6a9_13"><i class="fa fa-pinterest-p" ></i></a><a href=#url target=_blank class=gdlr-core-social-network-icon title=twitter id="a_e6a9_14"><i class="fa fa-twitter" ></i></a><a href=#url target=_blank class=gdlr-core-social-network-icon title=instagram id="a_e6a9_15"><i class="fa fa-instagram" ></i></a></div>
-                                                </div>
-                                                <div class=gdlr-core-author-list-url><a href=author4/index.html>Read Articles</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <?php endforeach;?>
+                                   
                                 </div>
-                            </div>
+                            </div> 
                         </div>
                     </div>
                 </div>

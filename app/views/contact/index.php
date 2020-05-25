@@ -10,13 +10,13 @@
                             <div class=gdlr-core-pbf-element>
                                 <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 15px ;">
                                     <div class="gdlr-core-title-item-title-wrap ">
-                                        <h1 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 45px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #1e1e1e ;">Contact Akea<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h1></div>
+                                        <h1 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 45px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;color: #1e1e1e ;"><?=$this->toptext->title;?><span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h1></div>
                                 </div>
                             </div>
                             <div class=gdlr-core-pbf-element>
                                 <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr">
                                     <div class="gdlr-core-title-item-title-wrap ">
-                                        <div class="gdlr-core-title-item-title gdlr-core-skin-title  gdlr-core-title-font" style="font-size: 23px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;color: #9f9f9f ;">Get in tour with us<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></div>
+                                        <div class="gdlr-core-title-item-title gdlr-core-skin-title  gdlr-core-title-font" style="font-size: 23px ;font-weight: 500 ;letter-spacing: 0px ;text-transform: none ;color: #9f9f9f ;"><?=$this->toptext->body;?><span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></div>
                                     </div>
                                 </div>
                             </div>
@@ -32,25 +32,25 @@
                                     <div class=gdlr-core-pbf-background-wrap style="background-color: #f28f4e ;border-radius: 4px 0px 0px 4px;-moz-border-radius: 4px 0px 0px 4px;-webkit-border-radius: 4px 0px 0px 4px;background: linear-gradient(rgba(242, 143, 78, 1), rgba(236, 106, 42, 1));-moz-background: linear-gradient(rgba(242, 143, 78, 1), rgba(236, 106, 42, 1));-o-background: linear-gradient(rgba(242, 143, 78, 1), rgba(236, 106, 42, 1));-webkit-background: linear-gradient(rgba(242, 143, 78, 1), rgba(236, 106, 42, 1));"></div>
                                     <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js " data-gdlr-animation=fadeInUp data-gdlr-animation-duration=600ms data-gdlr-animation-offset=0.8>
                                         <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-icon-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><i class=" gdlr-core-icon-item-icon fa fa-phone" style="color: #ffffff ;font-size: 32px ;min-width: 32px ;min-height: 32px ;"></i></div>
+                                            <div class="gdlr-core-icon-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><i class=" gdlr-core-icon-item-icon fa fa-<?=$this->phone->svg_image;?>" style="color: #ffffff ;font-size: 32px ;min-width: 32px ;min-height: 32px ;"></i></div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 17px ;">
                                                 <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 22px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;">Phone<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 22px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;"><?=$this->phone->title;?><span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 0px ;">
                                                 <div class=gdlr-core-text-box-item-content style="font-size: 15px ;text-transform: none ;color: #ffffff ;">
-                                                    <p>A wonderful serenity has taken possession of my entire soul, like these.</p>
+                                                    <p><?=$this->phone->body;?></p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
                                                 <div class=gdlr-core-text-box-item-content style="font-size: 16px ;text-transform: none ;color: #ffffff ;">
-                                                    <p><a href=#>+1-2345-2345</a></p>
+                                                    <p><a href=#><?=$this->phone->contact;?></a></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -62,25 +62,25 @@
                                     <div class=gdlr-core-pbf-background-wrap style="background-color: #f28f4e ;border-radius: 0px 0px 0px 0px;-moz-border-radius: 0px 0px 0px 0px;-webkit-border-radius: 0px 0px 0px 0px;background: linear-gradient(rgba(242, 143, 78, 1), rgba(236, 106, 42, 1));-moz-background: linear-gradient(rgba(242, 143, 78, 1), rgba(236, 106, 42, 1));-o-background: linear-gradient(rgba(242, 143, 78, 1), rgba(236, 106, 42, 1));-webkit-background: linear-gradient(rgba(242, 143, 78, 1), rgba(236, 106, 42, 1));"></div>
                                     <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js " data-gdlr-animation=fadeInUp data-gdlr-animation-duration=600ms data-gdlr-animation-offset=0.8>
                                         <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-icon-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><i class=" gdlr-core-icon-item-icon fa fa-envelope-open-o" style="color: #ffffff ;font-size: 32px ;min-width: 32px ;min-height: 32px ;"></i></div>
+                                            <div class="gdlr-core-icon-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><i class=" gdlr-core-icon-item-icon fa fa-<?=$this->envelope->svg_image;?>-open-o" style="color: #ffffff ;font-size: 32px ;min-width: 32px ;min-height: 32px ;"></i></div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 17px ;">
                                                 <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 22px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;">Email<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                             <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 22px font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;"><?=$this->envelope->title;?><span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 0px ;">
                                                 <div class=gdlr-core-text-box-item-content style="font-size: 15px ;text-transform: none ;color: #ffffff ;">
-                                                    <p>A wonderful serenity has taken possession of my entire soul, like these.</p>
+                                                    <p><?=$this->envelope->body;?></p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
                                                 <div class=gdlr-core-text-box-item-content style="font-size: 16px ;text-transform: none ;color: #ffffff ;">
-                                                    <p><a href=#>contact@akeagoodlayers.com</a></p>
+                                                    <p><a href='<?=$this->envelope->contact;?>'><?=$this->envelope->contact;?></a></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -92,25 +92,25 @@
                                     <div class=gdlr-core-pbf-background-wrap style="background-color: #f28f4e ;border-radius: 0px 4px 4px 0px;-moz-border-radius: 0px 4px 4px 0px;-webkit-border-radius: 0px 4px 4px 0px;background: linear-gradient(rgba(242, 143, 78, 1), rgba(236, 106, 42, 1));-moz-background: linear-gradient(rgba(242, 143, 78, 1), rgba(236, 106, 42, 1));-o-background: linear-gradient(rgba(242, 143, 78, 1), rgba(236, 106, 42, 1));-webkit-background: linear-gradient(rgba(242, 143, 78, 1), rgba(236, 106, 42, 1));"></div>
                                     <div class="gdlr-core-pbf-column-content clearfix gdlr-core-js " data-gdlr-animation=fadeInUp data-gdlr-animation-duration=600ms data-gdlr-animation-offset=0.8>
                                         <div class=gdlr-core-pbf-element>
-                                            <div class="gdlr-core-icon-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><i class=" gdlr-core-icon-item-icon icon_compass_alt" style="color: #ffffff ;font-size: 32px ;min-width: 32px ;min-height: 32px ;"></i></div>
+                                            <div class="gdlr-core-icon-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align"><i class=" gdlr-core-icon-item-icon icon_<?=$this->compass->svg_image;?>_alt" style="color: #ffffff ;font-size: 32px ;min-width: 32px ;min-height: 32px ;"></i></div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-left-align gdlr-core-title-item-caption-top gdlr-core-item-pdlr" style="padding-bottom: 17px ;">
                                                 <div class="gdlr-core-title-item-title-wrap ">
-                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 22px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;">Location<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
+                                                    <h3 class="gdlr-core-title-item-title gdlr-core-skin-title " style="font-size: 22px ;font-weight: 700 ;letter-spacing: 0px ;text-transform: none ;"><?=$this->compass->title;?><span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider" ></span></h3></div>
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align" style="padding-bottom: 0px ;">
                                                 <div class=gdlr-core-text-box-item-content style="font-size: 15px ;text-transform: none ;color: #ffffff ;">
-                                                    <p>A wonderful serenity has taken possession of my entire soul, like these.</p>
+                                                    <p><?=$this->compass->body;?></p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-left-align">
                                                 <div class=gdlr-core-text-box-item-content style="font-size: 16px ;text-transform: none ;color: #ffffff ;">
-                                                    <p><a href=#>View on Google</a></p>
+                                                    <p><a href='<?=$this->compass->endpoint;?>'>View on Google</a></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -136,14 +136,14 @@
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-title-item gdlr-core-item-pdb clearfix  gdlr-core-center-align gdlr-core-title-item-caption-bottom gdlr-core-item-pdlr" style="padding-bottom: 40px ;" id=gdlr-core-title-item-1>
                                                 <div class="gdlr-core-title-item-title-wrap ">
-                                                    <div class="gdlr-core-title-item-title gdlr-core-skin-title  gdlr-core-title-font" style="font-size: 19px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;color: #989898 ;">and we will get back to you.<span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></div>
+                                                    <div class="gdlr-core-title-item-title gdlr-core-skin-title  gdlr-core-title-font" style="font-size: 19px ;font-weight: 600 ;letter-spacing: 0px ;text-transform: none ;color: #989898 ;"><?=$this->lowerText->svg_image;?><span class="gdlr-core-title-item-title-divider gdlr-core-skin-divider"></span></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class=gdlr-core-pbf-element>
                                             <div class="gdlr-core-text-box-item gdlr-core-item-pdlr gdlr-core-item-pdb gdlr-core-center-align">
                                                 <div class=gdlr-core-text-box-item-content style="font-size: 16px ;text-transform: none ;">
-                                                    <p>A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart. I am alone, and feel the charm</p>
+                                                    <p><?=$this->lowerText->body;?></p>
                                                 </div>
                                             </div>
                                         </div>
